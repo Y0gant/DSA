@@ -84,25 +84,36 @@ public class Patterns2 {
     }
 
     public void pattern10(int n) {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j <=i; j++) {
+
+        for (int i = 0; i < n*2; i++) {
+            int stars =i;
+            if (i>n){
+                stars=2*n-i;
+                }
+            for (int j = 0; j < stars; j++) {
                 System.out.print("*");
-            }
-            for (int k = 0; k <n-1-i; k++) {
-                System.out.print(" ");
             }
             System.out.println();
         }
-        for (int a = 0; a < n; a++) {
-            for (int d = n-1; d >a ; d--) {
-                System.out.print("*");
-            }
-            for (int s = 0; s < a; s++) {
-                System.out.print(" ");
-            }
-            System.out.println();
-        }
-    }
+//        for (int i = 0; i < n; i++) {
+//            for (int j = 0; j <=i; j++) {
+//                System.out.print("*");
+//            }
+//            for (int k = 0; k <n-1-i; k++) {
+//                System.out.print(" ");
+//            }
+//            System.out.println();
+//        }
+//        for (int a = 0; a < n; a++) {
+//            for (int d = n-1; d >a ; d--) {
+//                System.out.print("*");
+//            }
+//            for (int s = 0; s < a; s++) {
+//                System.out.print(" ");
+//            }
+//            System.out.println();
+//        }
+   }
     public void pattern9(int n) {
         for (int i = 0; i <n; i++) {
             for (int j = 0; j < n-1-i; j++) {

@@ -13,6 +13,36 @@ public class Patterns3 {
         obj.pattern19(5);
         System.out.println("Pattern 20 :");
         obj.pattern20(5);
+        System.out.println("Pattern 21 :");
+        obj.pattern21(5);
+        System.out.println("Pattern 22 :");
+        obj.pattern22(5);
+    }
+
+    public void pattern22(int n) {
+        for (int i = 0; i <n*2-1; i++) {
+            for (int j = 0; j <n*2-1; j++) {
+                int top=i;
+                int left=j;
+                int right=(2*n-2)-j;
+                int bottom=(2*n-2)-i;
+                System.out.print(n-Math.min(Math.min(top,bottom),Math.min(right,left)));
+            }
+            System.out.println();
+        }
+    }
+
+    public  void pattern21(int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 || i == n - 1 ||j==0|| j == n-1) {
+                    System.out.print("*");
+                }
+                else {System.out.print(" ");}
+
+            }
+            System.out.println();
+        }
     }
     public  void pattern20(int n) {
         int spaces = 2*n-2;

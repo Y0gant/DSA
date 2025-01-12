@@ -2,7 +2,7 @@ package src.Patterns;
 
 public class Patterns1 {
     public static void main(String[] args) {
-         Patterns1 obj1 = new Patterns1();
+        Patterns1 obj1 = new Patterns1();
         System.out.println("Pattern 1 :");
         obj1.pattern1(3);
         System.out.println("Pattern 2 :");
@@ -19,14 +19,14 @@ public class Patterns1 {
     }
 
 
-        public void pattern6(int n) {
-            for (int i = n; i > 0; i--) {
-                for (int k = 0; k < i; k++) {
-                    System.out.print((k+1)+" ");
-                }
-                System.out.println();
+    public void pattern6(int n) {
+        for (int i = n; i > 0; i--) {
+            for (int k = 0; k < i; k++) {
+                System.out.print((k + 1) + " ");
             }
+            System.out.println();
         }
+    }
 
 
     public void pattern5(int n) {
@@ -39,38 +39,40 @@ public class Patterns1 {
         }
     }
 
-        public void pattern4(int n) {
+    public void pattern4(int n) {
 
-            for (int i = 0; i < n; i++) {
-                for (int j = 0; j <= i; j++) {
-                    System.out.print((i+1)+" ");
-                }
-                System.out.println();
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print((i + 1) + " ");
             }
+            System.out.println();
         }
+    }
 
 
     public void pattern3(int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <= i; j++) {
-                System.out.print((j+1)+" ");
+                System.out.print((j + 1) + " ");
             }
             System.out.println();
         }
     }
+
     public void pattern2(int n) {
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j <=i; j++) {
-                System.out.print("*"+" ");
+            for (int j = 0; j <= i; j++) {
+                System.out.print("*" + " ");
             }
             System.out.println();
         }
     }
+
     public void pattern1(int n) {
 
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j <n; j++) {
-                System.out.print("*"+" ");
+            for (int j = 0; j < n; j++) {
+                System.out.print("*" + " ");
 
             }
             System.out.println();

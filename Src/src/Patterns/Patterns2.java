@@ -85,7 +85,7 @@ public class Patterns2 {
 
     public void pattern10(int n) {
 
-        for (int i = 0; i < n*2; i++) {
+        for (int i = 0; i < n*2-1; i++) {
             int stars =i;
             if (i>n){
                 stars=2*n-i;

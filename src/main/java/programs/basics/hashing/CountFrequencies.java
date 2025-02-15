@@ -3,6 +3,7 @@ package programs.basics.hashing;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 class FrequencyCounter {
 
@@ -34,7 +35,7 @@ class FrequencyCounter {
         for (int i = 0; i < n; i++) {
             char c = s.charAt(i);
             if (Character.isLetter(c)) {
-                hashArray[c - 'a'] += 1;
+                hashArray[c - 'a']++;
             }
         }
         printCharCount();
@@ -96,15 +97,9 @@ public class CountFrequencies {
         System.out.println("Frequency of 40 in given array = " + count.find(40));
         System.out.println("Frequency of -1 in given array = " + count.find(-1));
 
-
+        Scanner sc = new Scanner(System.in);
         //counting string character elements
-        String s = "Hey there!! I am a Master's student pursuing " +
-                "computer science, passionate about Full stack development, and problem-solving." +
-                " Currently, I am invested in Java and DSA, SQL-NoSql databases, and technologies such as Spring Boot, Hibernate and RESTful APIs." +
-                " As for new things: DevOps tools- Docker CI/CD pipelines and cloud technologies to improve the deployment and scalability of applications." +
-                " I am interested in software architecture and distributed systems," +
-                " and I always try to write clean, maintainable, and structured code!" +
-                "Open to collaboration. Excited to learn new technologies!";
+        String s = sc.nextLine();
         count.characterCount(s);
 
     }

@@ -20,9 +20,7 @@ class FrequencyCounter {
     public void printCharCount() {
 
         for (int i = 0; i < 26; i++) {
-            if (hashArray[i] == 0) {
-                continue;
-            } else {
+            if (hashArray[i] != 0) {
                 System.out.print(alphabets[i] + "=" + hashArray[i] + " ,");
             }
         }

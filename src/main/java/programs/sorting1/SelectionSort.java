@@ -18,40 +18,42 @@ public class SelectionSort {
                 243, 501, 390, 256, 807, 143, 908, 687, 511, 779,
                 646, 888, 932, 572, 492, 819, 110, 620, 415, 267,
                 305, 723, 490, 340, 651, 799, 730, 448, 558, 612};
+
         SelectionSort obj = new SelectionSort();
-        int[] sorted = obj.selectionSort(arr);
-        int[] sorted2 = obj.selectionSort(arr2);
-        int[] sorted3 = obj.selectionSort(arr3);
+
+        int[] sorted = obj.selectionSort(arr.clone());
+        int[] sorted2 = obj.selectionSort(arr2.clone());
+        int[] sorted3 = obj.selectionSort(arr3.clone());
+
         System.out.println("Sorted array 1 :");
-        for (int i : sorted) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        System.out.println("sorted array 2 :");
-        for (int i : sorted2) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+        printArray(sorted);
+        System.out.println("Sorted array 2 :");
+        printArray(sorted2);
         System.out.println("Sorted array 3 :");
-        for (int i : sorted3) {
-            System.out.print(i + " ");
+        printArray(sorted3);
+    }
+
+    private static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
         }
         System.out.println();
     }
-
 
     public int[] selectionSort(int[] arr) {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             int mini = i;
-            for (int j = i; j < n; j++) {
+            for (int j = i + 1; j < n; j++) {
                 if (arr[j] < arr[mini]) {
                     mini = j;
                 }
             }
-            int temp = arr[mini];
-            arr[mini] = arr[i];
-            arr[i] = temp;
+            if (mini != i) {
+                int temp = arr[mini];
+                arr[mini] = arr[i];
+                arr[i] = temp;
+            }
         }
         return arr;
     }

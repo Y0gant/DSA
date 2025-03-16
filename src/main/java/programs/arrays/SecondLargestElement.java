@@ -11,7 +11,8 @@ public class SecondLargestElement {
                 454, 565, 676, 787, 898, 919, 212, 323, 434, 545};
 
         System.out.println("Second largest element: " + secondLargest(arr1));
-       
+        System.out.println("Second smallest element: " + secondSmallest(arr1));
+
     }
 
     public static int secondLargest(int[] arr) {
@@ -26,5 +27,20 @@ public class SecondLargestElement {
             }
         }
         return secondLargest;
+    }
+
+    public static int secondSmallest(int[] arr) {
+        int smallest = arr[0];
+        int sSmallest = Integer.MAX_VALUE - 1;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < smallest) {
+                sSmallest = smallest;
+                smallest = arr[i];
+            } else if (arr[i] != smallest && arr[i] < sSmallest) {
+                sSmallest = arr[i];
+            }
+        }
+        return sSmallest;
     }
 }

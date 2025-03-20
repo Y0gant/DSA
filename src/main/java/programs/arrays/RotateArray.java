@@ -5,8 +5,10 @@ public class RotateArray {
         RotateArray obj = new RotateArray();
         int[] nums = {1, 2, 3, 4, 5, 6, 7};
         int[] nums2 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-        obj.rotateRightBrute(nums2, 3);
-        obj.rotateLeftBrute(nums, 3);
+//        obj.rotateRightBrute(nums2, 3);
+//        obj.rotateLeftBrute(nums, 3);
+        obj.rotateLeft(nums, 3);
+        obj.rotateRight(nums2, 4);
         for (int i : nums) {
             System.out.print(i + " ");
         }
@@ -17,6 +19,35 @@ public class RotateArray {
 
     }
 
+    //optimal approach for rotating an array
+    public void reverse(int[] arr, int start, int end) {
+        while (start <= end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+
+    public void rotateLeft(int[] arr, int k) {
+        int n = arr.length;
+        k = k % n;
+        reverse(arr, 0, k - 1);
+        reverse(arr, k, n - 1);
+        reverse(arr, 0, n - 1);
+    }
+
+    public void rotateRight(int[] arr, int k) {
+        int n = arr.length;
+        k = k % n;
+        reverse(arr, n - k, n - 1);
+        reverse(arr, 0, n - k - 1);
+        reverse(arr, 0, n - 1);
+
+    }
+
+    //Bruteforce approaches
     public void rotateLeftBrute(int[] nums, int k) {
         int n = nums.length;
         k = k % n;

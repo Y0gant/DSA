@@ -25,8 +25,9 @@ public class MoveZeroesToLast {
 
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] != 0) {
+                int temp = arr[j];
                 arr[j] = arr[i];
-                arr[i] = 0;
+                arr[i] = temp;
                 j++;
             }
         }

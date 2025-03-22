@@ -1,4 +1,4 @@
-package programs.arrays;
+package programs.arrays.easy;
 
 public class RotateArray {
     public static void main(String[] args) {
@@ -53,18 +53,13 @@ public class RotateArray {
         k = k % n;
         int[] temp = new int[k];
 
-        for (int i = 0; i < k; i++) {
-            temp[i] = nums[i];
-
-        }
+        System.arraycopy(nums, 0, temp, 0, k);
 
         for (int i = k; i < n; i++) {
             nums[i - k] = nums[i];
         }
 
-        for (int i = n - k; i < n; i++) {
-            nums[i] = temp[i - (n - k)];
-        }
+        if (n - (n - k) >= 0) System.arraycopy(temp, n - k - (n - k), nums, n - k, n - (n - k));
 
     }
 

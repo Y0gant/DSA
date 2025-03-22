@@ -1,4 +1,4 @@
-package programs.arrays;
+package programs.arrays.easy;
 
 public class RotateByOne {
     public static void main(String[] args) {

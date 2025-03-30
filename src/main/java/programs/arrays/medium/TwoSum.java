@@ -31,7 +31,7 @@ public class TwoSum {
     public static String twoSum(int[] nums, int target) {
         int left = 0, right = nums.length - 1;
         Arrays.sort(nums);
-   
+
         while (left < right) {
             int sum = nums[left] + nums[right];
             if (sum == target) {
@@ -57,17 +57,15 @@ public class TwoSum {
     }
 
     public static int[] getTwoSumsBrute(int[] arr, int k) {
-        int[] indices = new int[2];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 if (i == j) continue;
                 if (arr[i] + arr[j] == k) {
-                    indices[0] = i;
-                    indices[1] = j;
+                    return new int[]{i, j};
                 }
             }
         }
-        return indices;
+        return new int[]{-1, -1};
     }
 
 }

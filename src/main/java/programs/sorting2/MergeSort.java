@@ -62,6 +62,10 @@ public class MergeSort {
 
     public int[] mergeSort(int[] arr, int low, int high) {
 
+        if (arr.length == 0) {
+            return arr;
+        }
+
         int mid = (low + high) / 2;
 
         if (low >= high) {

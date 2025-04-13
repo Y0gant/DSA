@@ -17,6 +17,21 @@ public class Patterns3 {
         obj.pattern21(5);
         System.out.println("Pattern 22 :");
         obj.pattern22(5);
+        System.out.println("Pattern 23 :");
+        obj.pattern23(6);
+    }
+
+    public void pattern23(int n) {
+        int num = 1;
+        for (int i = 1; i <= n; i++) {
+            int val = num;
+            for (int j = 1; j <= i; j++) {
+                System.out.print(val + " ");
+                val -= (n - j);
+            }
+            num += (n - i);
+            System.out.println();
+        }
     }
 
     public void pattern22(int n) {

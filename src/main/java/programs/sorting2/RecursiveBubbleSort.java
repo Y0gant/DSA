@@ -16,6 +16,9 @@ public class RecursiveBubbleSort {
     }
 
     public void recursiveBS(int[] arr, int n) {
+        if (n == 0) {
+            return;
+        }
         if (n == 1) {
             return;
         }

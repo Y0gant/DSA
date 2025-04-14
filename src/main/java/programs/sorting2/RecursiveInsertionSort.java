@@ -28,6 +28,7 @@ public class RecursiveInsertionSort {
     }
 
     public void recursiveInsertionSort(int[] arr, int i, int n) {
+        if (n == 0) return;
         if (i == n) {
             return;
         }

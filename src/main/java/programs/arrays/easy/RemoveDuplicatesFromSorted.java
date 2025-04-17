@@ -40,7 +40,7 @@ public class RemoveDuplicatesFromSorted {
                 nums[p] = nums[i];
             }
         }
-        return ++p;
+        return p + 1;
     }
 
 }

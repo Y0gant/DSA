@@ -31,6 +31,7 @@ public class RotateArray {
     }
 
     public void rotateLeft(int[] arr, int k) {
+        if (arr == null || arr.length <= 1) return;
         int n = arr.length;
         k = k % n;
         reverse(arr, 0, k - 1);
@@ -39,6 +40,7 @@ public class RotateArray {
     }
 
     public void rotateRight(int[] arr, int k) {
+        if (arr == null || arr.length <= 1) return;
         int n = arr.length;
         k = k % n;
         reverse(arr, n - k, n - 1);
@@ -49,6 +51,7 @@ public class RotateArray {
 
     //Bruteforce approaches
     public void rotateLeftBrute(int[] nums, int k) {
+        if (nums == null || nums.length <= 1) return;
         int n = nums.length;
         k = k % n;
         int[] temp = new int[k];
@@ -64,6 +67,7 @@ public class RotateArray {
     }
 
     public void rotateRightBrute(int[] nums, int k) {
+        if (nums == null || nums.length <= 1) return;
         int n = nums.length;
         k = k % n;
         int[] temp = new int[k];

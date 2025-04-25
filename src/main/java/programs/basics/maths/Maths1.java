@@ -14,6 +14,7 @@ public class Maths1 {
 
     public int countDigitsBrute(int n) {
         int aBS = Math.abs(n);
+        if (aBS == 0) return 1;
         while (aBS > 0) {
             count++;
             aBS = aBS / 10;
